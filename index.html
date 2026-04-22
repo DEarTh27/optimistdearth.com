@@ -46,7 +46,7 @@ section {
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 20px;
 }
 
@@ -128,6 +128,46 @@ footer {
     background: #38bdf8;
     color: #020617;
 }
+.experience-card {
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.company-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: white;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.company-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.company-header p {
+    margin: 3px 0 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+.company-header a, .exp-links a { color: #fff; }
+@media (max-width: 768px) {
+    #experience .grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -159,27 +199,105 @@ footer {
 
 <section id="experience">
     <h2>Experience</h2>
-    <div class="timeline">
 
-        <div>
-            <h3>Team Lead - PHP Developer</h3>
-            <p>Dean Infotech | 2021 - Present</p>
-            <p>Leading teams, building WordPress & Laravel applications, managing Git workflows and client communication.</p>
+    <div class="grid">
+
+
+    </div>
+</section>
+<section id="experience">
+    <h2>Experience</h2>
+
+    <div class="grid">
+
+        <div class="card experience-card">
+            <div class="company-header">
+                <img src="images/qral-logo.svg" alt="Dean Infotech">
+                <div>
+                    <h3>Wordpress Developer</h3>
+                    <p><a href="https://qral.com" target="_blank">Qeal Group</a> | 2022 - Present</p>
+                </div>
+            </div>
+            <p>
+                Leading development teams, building WordPress & Laravel applications,
+                managing Git workflows, and handling client communication.
+            </p>
+        </div>
+        <div class="card experience-card">
+            <div class="company-header">
+                <img src="images/dean-logo.avif" />
+                <div>
+                    <h3>Team Lead - PHP Developer</h3>
+                    <p><a href="https://deaninfotech.com" target="_blank">Dean Infotech</a> | 2021 - Present</p>
+                </div>
+            </div>
+            <p>Leading development teams, building WordPress & Laravel applications, managing Git workflows, and handling client communication.</p>
+            <div class="exp-links">
+                <a href="https://deaninfotech.com" target="_blank">🌐 Website</a>
+                <a href="https://www.linkedin.com/company/dean-infotech/" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+        <div class="card experience-card">
+            <div class="company-header">
+                <img src="images/capital-numbers-logo.svg" />
+                <div>
+                    <h3>Software Engineer</h3>
+                    <p>
+                        <a href="https://www.capitalnumbers.com" target="_blank">Capital Numbers</a> | 2020
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                Developed websites and dashboards, handled WordPress customization, debugging, and Git repository management.
+            </p>
+
+            <div class="exp-links">
+                <a href="https://www.capitalnumbers.com" target="_blank">🌐 Website</a>
+                <a href="https://www.linkedin.com/company/capital-numbers/" target="_blank">🔗 LinkedIn</a>
+            </div>
         </div>
 
-        <div>
-            <h3>Software Engineer</h3>
-            <p>Capital Numbers | 2020</p>
+
+        <div class="card experience-card">
+            <div class="company-header">
+                <img src="images/quazma-logo.svg" />
+                <div>
+                    <h3>Web Developer</h3>
+                    <p>
+                        <a href="https://quazma.com" target="_blank">Quazma Techno Solution</a> | 2018 - 2020
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                Built admin dashboards using CodeIgniter & PHP, developed REST APIs, and worked on WordPress multisite systems.
+            </p>
+
+            <div class="exp-links">
+                <span>No official website</span>
+            </div>
         </div>
 
-        <div>
-            <h3>Web Developer</h3>
-            <p>Quazma Techno Solution | 2018 - 2020</p>
-        </div>
 
-        <div>
-            <h3>PHP Developer</h3>
-            <p>Softgrid Computers | 2017 - 2018</p>
+        <div class="card experience-card">
+            <div class="company-header">
+                <img src="images/genx-softgrid-logo.svg" />
+                <div>
+                    <h3>PHP Developer</h3>
+                    <p>
+                        <a href="https://www.softgridcomputers.com/" target="_blank">Softgrid Computers</a> | 2017 - 2018
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                Developed Symfony & CodeIgniter applications and backend systems.
+            </p>
+
+            <div class="exp-links">
+                <span>No official website</span>
+            </div>
         </div>
 
     </div>
