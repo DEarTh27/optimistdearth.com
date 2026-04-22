@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jitendra Chouhan | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body { margin: 0; font-family: Arial; background: #0f172a; color: #e2e8f0; }
+body { margin: 0; font-family: Arial; background: repeating-radial-gradient(#191d20, #051330 5px); color: #e2e8f0; }
 /* NAV */
 nav { display: flex; justify-content: space-between; padding: 15px 10%; background: #020617; position: sticky; top: 0; }
 nav a { color: #e2e8f0; margin-left: 20px; text-decoration: none; }
@@ -25,7 +27,7 @@ section { padding: 60px 10%; }
 .project:hover { transform: translateY(-6px); }
 /* TIMELINE */
 .timeline { border-left: 2px solid #38bdf8; padding-left: 20px; }
-.timeline div { margin-bottom: 25px; }
+.timeline .timeline_card { margin-bottom: 25px; }
 /* SKILLS */
 .skill { margin-bottom: 15px; }
 .bar { height: 8px; background: #1e293b; border-radius: 5px; }
@@ -41,10 +43,29 @@ footer { text-align: center; padding: 20px; background: #020617; }
 .company-header img { width: 50px; height: 50px; border-radius: 8px; background: white; object-fit: contain; padding: 5px; }
 .company-header h3 { margin: 0; font-size: 1.1rem; }
 .company-header p { margin: 3px 0 0; font-size: 0.9rem; color: #94a3b8; }
-.company-header a, .exp-links a { color: #fff; }
+.company-header a, .exp-links a, .exp_duration a { color: #fff; }
 @media (max-width: 768px) {
     #experience .grid { grid-template-columns: 1fr; }
 }
+
+/* GLASS CARD */
+.timeline_card { background: rgba(255,255,255,0.05); backdrop-filter: blur(18px); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
+.timeline_card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+/* TIMELINE */
+.timeline { border-left: 2px solid rgba(56,189,248,0.5); padding-left: 25px; }
+.timeline .timeline_card::before { content: ""; position: absolute; left: -34px; top: 20px; width: 10px; height: 10px; background: #38bdf8; border-radius: 50%; }
+.exp_header { display: flex; gap: 50px; align-items: center; justify-content: space-between; }
+.company_info {display: flex;gap: 20px;flex: 1 1;align-items: center;justify-content: space-between;}
+.compnay_logo img { max-height: 80px; max-width: 180px; }
+.exp_duration { text-align: right; }
+.exp_description { flex: 1 1; }
+.timeline_card:not(:first-child) .compnay_logo { background: #fff; }
+.compnay_logo { box-shadow: 0px 0px 10px 1px #387ea1; padding: 10px; border-radius: 5px; }
+/* BUTTON */
+.btn { padding: 12px 22px; border-radius: 10px; text-decoration: none; color: #fff; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+.btn.primary { background: linear-gradient(90deg, #38bdf8, #6366f1); }
+.btn:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(56,189,248,0.3); }
+.hero-contact { margin-top: 35px; display: flex; justify-content: center; gap: 15px; }
 </style>
 </head>
 <body>
@@ -59,8 +80,13 @@ footer { text-align: center; padding: 20px; background: #020617; }
     </div>
 </nav>
 <div class="hero">
-    <h1>Team Lead & Full Stack Developer</h1>
-    <p>8+ Years | PHP | WordPress | APIs | AWS</p>
+    <h1>Building Scalable Digital Products</h1>
+    <p>Team Lead & Full Stack Developer • 8+ Years Experience</p>
+
+    <div class="hero-contact">
+        <a class="btn primary" href="mailto:jitendraearth27@gmail.com">Hire Me</a>
+        <a class="btn" href="https://www.linkedin.com/in/jitendrawp/" target="_blank">LinkedIn</a>
+    </div>
 </div>
 <section id="about">
     <h2>About Me</h2>
@@ -71,77 +97,76 @@ footer { text-align: center; padding: 20px; background: #020617; }
 </section>
 <section id="experience">
     <h2>Experience</h2>
-    <div class="grid">
-        <div class="card experience-card">
-            <div class="company-header">
-                <img src="images/qral-logo.svg" alt="Dean Infotech">
-                <div>
-                    <h3>Wordpress Developer</h3>
-                    <p><a href="https://qral.com" target="_blank">Qeal Group</a> | 2022 - Present</p>
+    <div class="timeline">
+        <div class="timeline_card">
+            <div class="exp_header">
+                <div class="company_info">
+                    <div class="compnay_logo"><a href="https://deaninfotech.com" target="_blank"><img src="images/dean-logo.avif" /></a></div>
+                    <div class="exp_duration">
+                        <h3>Team Lead - PHP Developer</h3>
+                        <p><a href="https://deaninfotech.com" target="_blank">Dean Infotech</a> | 2021 - Present</p>
+                    </div>
                 </div>
-            </div>
-            <p>Leading development teams, building WordPress & Laravel applications, managing Git workflows, and handling client communication.</p>
-            <div class="exp-links">
-                <a href="https://qral.com" target="_blank">🌐 Website</a>
+                <div class="exp_description">Leading development teams, building WordPress & Laravel applications, managing Git workflows, and handling client communication.</div>
             </div>
         </div>
-        <div class="card experience-card">
-            <div class="company-header">
-                <img src="images/dean-logo.avif" />
-                <div>
-                    <h3>Team Lead - PHP Developer</h3>
-                    <p><a href="https://deaninfotech.com" target="_blank">Dean Infotech</a> | 2021 - Present</p>
+
+        <div class="timeline_card">
+            <div class="exp_header">
+                <div class="company_info">
+                    <div class="compnay_logo"><a href="https://qral.com" target="_blank"><img src="images/qral-logo.svg" alt="Dean Infotech"></a></div>
+                    <div class="exp_duration">
+                        <h3>WordPress Developer</h3>
+                        <p><a href="https://qral.com" target="_blank">Qral Group</a> | 2022 - Present</p>
+                    </div>
                 </div>
-            </div>
-            <p>Leading development teams, building WordPress & Laravel applications, managing Git workflows, and handling client communication.</p>
-            <div class="exp-links">
-                <a href="https://deaninfotech.com" target="_blank">🌐 Website</a>
-                <a href="https://www.linkedin.com/company/dean-infotech/" target="_blank">🔗 LinkedIn</a>
+                <div class="exp_description">Building WordPress applications, managing Git workflows, and handling client communication.</div>
             </div>
         </div>
-        <div class="card experience-card">
-            <div class="company-header">
-                <img src="images/capital-numbers-logo.svg" />
-                <div>
-                    <h3>Software Engineer</h3>
-                    <p><a href="https://www.capitalnumbers.com" target="_blank">Capital Numbers</a> | 2020</p>
+
+
+        <div class="timeline_card">
+            <div class="exp_header">
+                <div class="company_info">
+                    <div class="compnay_logo"><a href="https://www.capitalnumbers.com" target="_blank"><img src="images/capital-numbers-logo.svg" /></a></div>
+                    <div class="exp_duration">
+                        <h3>Software Engineer</h3>
+                        <p><a href="https://www.capitalnumbers.com" target="_blank">Capital Numbers</a> | 2020</p>
+                    </div>
                 </div>
-            </div>
-            <p>Developed websites and dashboards, handled WordPress customization, debugging, and Git repository management.</p>
-            <div class="exp-links">
-                <a href="https://www.capitalnumbers.com" target="_blank">🌐 Website</a>
+                <div class="exp_description">Developed websites and dashboards, handled WordPress customization, debugging, and Git repository management.</div>
             </div>
         </div>
-        <div class="card experience-card">
-            <div class="company-header">
-                <img src="images/quazma-logo.svg" />
-                <div>
-                    <h3>Web Developer</h3>
-                    <p>
-                        <a href="https://quazma.com" target="_blank">Quazma Techno Solution</a> | 2018 - 2020
-                    </p>
+
+        <div class="timeline_card">
+            <div class="exp_header">
+                <div class="company_info">
+                    <div class="compnay_logo"><a href="https://quazma.com" target="_blank"><img src="images/quazma-logo.svg" /></a></div>
+                    <div class="exp_duration">
+                        <h3>Web Developer</h3>
+                        <p><a href="https://quazma.com" target="_blank">Quazma Techno Solution</a> | 2018 - 2020</p>
+                    </div>
                 </div>
-            </div>
-            <p>Built admin dashboards using CodeIgniter & PHP, developed REST APIs, and worked on WordPress multisite systems.</p>
-            <div class="exp-links">
-                <a href="https://quazma.com" target="_blank">🌐 Website</a>
+                <div class="exp_description">Built admin dashboards using CodeIgniter & PHP, developed REST APIs, and worked on WordPress multisite systems.</div>
             </div>
         </div>
-        <div class="card experience-card">
-            <div class="company-header">
-                <img src="images/genx-softgrid-logo.svg" />
-                <div>
-                    <h3>PHP Developer</h3>
-                    <p><a href="https://www.softgridcomputers.com/" target="_blank">Softgrid Computers</a> | 2017 - 2018</p>
+
+        <div class="timeline_card">
+            <div class="exp_header">
+                <div class="company_info">
+                    <div class="compnay_logo"><a href="https://softgridcomputers.com" target="_blank"><img src="images/genx-softgrid-logo.svg" /></a></div>
+                    <div class="exp_duration">
+                        <h3>PHP Developer</h3>
+                        <p><a href="https://softgridcomputers.com" target="_blank">Softgrid Computers</a> | 2017 - 2018</p>
+                    </div>
                 </div>
-            </div>
-            <p>Developed Symfony & CodeIgniter applications and backend systems.</p>
-            <div class="exp-links">
-                <a href="https://softgridcomputers.com" target="_blank">🌐 Website</a>
+                <div class="exp_description">Developed Symfony & CodeIgniter applications and backend systems.</div>
             </div>
         </div>
+
     </div>
 </section>
+
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills-container">
