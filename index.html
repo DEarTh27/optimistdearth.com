@@ -6,173 +6,48 @@
 <title>Jitendra Chouhan | Portfolio</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #0f172a;
-    color: #e2e8f0;
-}
-
+body { margin: 0; font-family: Arial; background: #0f172a; color: #e2e8f0; }
 /* NAV */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 10%;
-    background: #020617;
-    position: sticky;
-    top: 0;
-}
-nav a {
-    color: #e2e8f0;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
+nav { display: flex; justify-content: space-between; padding: 15px 10%; background: #020617; position: sticky; top: 0; }
+nav a { color: #e2e8f0; margin-left: 20px; text-decoration: none; }
 /* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-.hero h1 {
-    font-size: 3rem;
-    color: #38bdf8;
-}
-
+.hero { text-align: center; padding: 100px 20px; }
+.hero h1 { font-size: 3rem; color: #38bdf8; }
 /* SECTION */
-section {
-    padding: 60px 10%;
-}
-
+section { padding: 60px 10%; }
 /* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
-}
-
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 20px; }
 /* CARD */
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
+.card { background: #1e293b; padding: 20px; border-radius: 10px; transition: 0.3s; }
 /* PROJECT */
-.project img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-.project:hover {
-    transform: translateY(-6px);
-}
-
+.project img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+.project a { display: inline-block; margin-top: 10px; color: #38bdf8; text-decoration: none; }
+.project:hover { transform: translateY(-6px); }
 /* TIMELINE */
-.timeline {
-    border-left: 2px solid #38bdf8;
-    padding-left: 20px;
-}
-.timeline div {
-    margin-bottom: 25px;
-}
-
+.timeline { border-left: 2px solid #38bdf8; padding-left: 20px; }
+.timeline div { margin-bottom: 25px; }
 /* SKILLS */
-.skill {
-    margin-bottom: 15px;
-}
-.bar {
-    height: 8px;
-    background: #1e293b;
-    border-radius: 5px;
-}
-.fill {
-    height: 8px;
-    background: #38bdf8;
-    border-radius: 5px;
-}
-
+.skill { margin-bottom: 15px; }
+.bar { height: 8px; background: #1e293b; border-radius: 5px; }
+.fill { height: 8px; background: #38bdf8; border-radius: 5px; }
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-}
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.pill {
-    background: #1e293b;
-    color: #38bdf8;
-    padding: 8px 14px;
-    border-radius: 50px;
-    font-size: 14px;
-    border: 1px solid #38bdf8;
-    transition: 0.3s;
-    cursor: default;
-}
-
-.pill:hover {
-    background: #38bdf8;
-    color: #020617;
-}
-.experience-card {
-    transition: 0.3s;
-}
-
-.experience-card:hover {
-    transform: translateY(-6px);
-}
-
-.company-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.company-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    background: white;
-    object-fit: contain;
-    padding: 5px;
-}
-
-.company-header h3 {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.company-header p {
-    margin: 3px 0 0;
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
+footer { text-align: center; padding: 20px; background: #020617; }
+.skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.pill { background: #1e293b; color: #38bdf8; padding: 8px 14px; border-radius: 50px; font-size: 14px; border: 1px solid #38bdf8; transition: 0.3s; cursor: default; }
+.pill:hover { background: #38bdf8; color: #020617; }
+.experience-card { transition: 0.3s; }
+.experience-card:hover { transform: translateY(-6px); }
+.company-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.company-header img { width: 50px; height: 50px; border-radius: 8px; background: white; object-fit: contain; padding: 5px; }
+.company-header h3 { margin: 0; font-size: 1.1rem; }
+.company-header p { margin: 3px 0 0; font-size: 0.9rem; color: #94a3b8; }
 .company-header a, .exp-links a { color: #fff; }
 @media (max-width: 768px) {
-    #experience .grid {
-        grid-template-columns: 1fr;
-    }
+    #experience .grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
-
 <body>
-
 <nav>
     <h3>Jitendra</h3>
     <div>
@@ -183,38 +58,20 @@ footer {
         <a href="#contact">Contact</a>
     </div>
 </nav>
-
 <div class="hero">
     <h1>Team Lead & Full Stack Developer</h1>
     <p>8+ Years | PHP | WordPress | APIs | AWS</p>
 </div>
-
 <section id="about">
     <h2>About Me</h2>
-    <p>
-        With over 8 years of experience in web development, I’ve had the opportunity to work on a diverse range of projects, helping businesses build reliable, scalable, and high-performing digital products. My expertise lies in developing end-to-end solutions—from structuring databases and backend logic to crafting responsive, user-friendly interfaces.
-
-I’ve worked extensively on real-world applications including property platforms, custom tools, and performance-focused websites, always with a strong focus on clean architecture, SEO readiness, and long-term scalability. I’m comfortable handling everything from initial planning to deployment and optimization.
-
-What sets my work apart is a practical, solution-oriented approach. I focus on understanding the problem deeply and delivering efficient, maintainable solutions that align with business goals.
-
-I’m always open to new challenges and opportunities where I can contribute, improve systems, and build something meaningful.
-    </p>
-</section>
-
-<section id="experience">
-    <h2>Experience</h2>
-
-    <div class="grid">
-
-
-    </div>
+    <p>With over 8 years of experience in web development, I’ve had the opportunity to work on a diverse range of projects, helping businesses build reliable, scalable, and high-performing digital products. My expertise lies in developing end-to-end solutions—from structuring databases and backend logic to crafting responsive, user-friendly interfaces.</p>
+    <p>I’ve worked extensively on real-world applications including property platforms, custom tools, and performance-focused websites, always with a strong focus on clean architecture, SEO readiness, and long-term scalability. I’m comfortable handling everything from initial planning to deployment and optimization.</p>
+    <p>What sets my work apart is a practical, solution-oriented approach. I focus on understanding the problem deeply and delivering efficient, maintainable solutions that align with business goals.</p>
+    <p>I’m always open to new challenges and opportunities where I can contribute, improve systems, and build something meaningful.</p>
 </section>
 <section id="experience">
     <h2>Experience</h2>
-
     <div class="grid">
-
         <div class="card experience-card">
             <div class="company-header">
                 <img src="images/qral-logo.svg" alt="Dean Infotech">
@@ -223,10 +80,10 @@ I’m always open to new challenges and opportunities where I can contribute, im
                     <p><a href="https://qral.com" target="_blank">Qeal Group</a> | 2022 - Present</p>
                 </div>
             </div>
-            <p>
-                Leading development teams, building WordPress & Laravel applications,
-                managing Git workflows, and handling client communication.
-            </p>
+            <p>Leading development teams, building WordPress & Laravel applications, managing Git workflows, and handling client communication.</p>
+            <div class="exp-links">
+                <a href="https://qral.com" target="_blank">🌐 Website</a>
+            </div>
         </div>
         <div class="card experience-card">
             <div class="company-header">
@@ -247,23 +104,14 @@ I’m always open to new challenges and opportunities where I can contribute, im
                 <img src="images/capital-numbers-logo.svg" />
                 <div>
                     <h3>Software Engineer</h3>
-                    <p>
-                        <a href="https://www.capitalnumbers.com" target="_blank">Capital Numbers</a> | 2020
-                    </p>
+                    <p><a href="https://www.capitalnumbers.com" target="_blank">Capital Numbers</a> | 2020</p>
                 </div>
             </div>
-
-            <p>
-                Developed websites and dashboards, handled WordPress customization, debugging, and Git repository management.
-            </p>
-
+            <p>Developed websites and dashboards, handled WordPress customization, debugging, and Git repository management.</p>
             <div class="exp-links">
                 <a href="https://www.capitalnumbers.com" target="_blank">🌐 Website</a>
-                <a href="https://www.linkedin.com/company/capital-numbers/" target="_blank">🔗 LinkedIn</a>
             </div>
         </div>
-
-
         <div class="card experience-card">
             <div class="company-header">
                 <img src="images/quazma-logo.svg" />
@@ -274,42 +122,28 @@ I’m always open to new challenges and opportunities where I can contribute, im
                     </p>
                 </div>
             </div>
-
-            <p>
-                Built admin dashboards using CodeIgniter & PHP, developed REST APIs, and worked on WordPress multisite systems.
-            </p>
-
+            <p>Built admin dashboards using CodeIgniter & PHP, developed REST APIs, and worked on WordPress multisite systems.</p>
             <div class="exp-links">
-                <span>No official website</span>
+                <a href="https://quazma.com" target="_blank">🌐 Website</a>
             </div>
         </div>
-
-
         <div class="card experience-card">
             <div class="company-header">
                 <img src="images/genx-softgrid-logo.svg" />
                 <div>
                     <h3>PHP Developer</h3>
-                    <p>
-                        <a href="https://www.softgridcomputers.com/" target="_blank">Softgrid Computers</a> | 2017 - 2018
-                    </p>
+                    <p><a href="https://www.softgridcomputers.com/" target="_blank">Softgrid Computers</a> | 2017 - 2018</p>
                 </div>
             </div>
-
-            <p>
-                Developed Symfony & CodeIgniter applications and backend systems.
-            </p>
-
+            <p>Developed Symfony & CodeIgniter applications and backend systems.</p>
             <div class="exp-links">
-                <span>No official website</span>
+                <a href="https://softgridcomputers.com" target="_blank">🌐 Website</a>
             </div>
         </div>
-
     </div>
 </section>
 <section id="skills">
     <h2>Skills</h2>
-
     <div class="skills-container">
         <span class="pill">PHP</span>
         <span class="pill">WordPress</span>
@@ -337,57 +171,44 @@ I’m always open to new challenges and opportunities where I can contribute, im
 </section>
 <section id="projects">
     <h2>Projects</h2>
-
     <div class="grid">
-
         <div class="card project">
             <img src="https://image.thum.io/get/width/600/https://qralventures.com" />
             <h3>Qral Ventures</h3>
             <p>We catalyze the future of healthcare</p>
             <a href="https://qralventures.com/" target="_blank">View Project</a>
         </div>
-
         <div class="card project">
             <img src="https://image.thum.io/get/width/600/https://bluedotbio.com" />
             <h3>Bluedot Bio</h3>
             <p>Biotechnology company producing first-in-class drugs and platform technologies</p>
             <a href="https://bluedotbio.com" target="_blank">View Project</a>
         </div>
-
         <div class="card project">
             <img src="https://image.thum.io/get/width/600/https://ikaikatherapeutics.com" />
             <h3>ikaika Therapeutics</h3>
             <p>First-in-class, Anti-Fibrotic Biologics, Advancing therapies designed from genetic signals</p>
             <a href="https://ikaikatherapeutics.com" target="_blank">View Project</a>
         </div>
-
         <div class="card project">
             <img src="https://image.thum.io/get/width/600/https://windowtx.com" />
             <h3>Window Therapeutics</h3>
             <p>Opening the window to better outcomes for patients</p>
             <a href="https://windowtx.com" target="_blank">View Project</a>
         </div>
-
         <div class="card project">
             <img src="https://image.thum.io/get/width/600/https://qral.com" />
             <h3>Qral Group</h3>
             <p>At Qral Group, we bring together the brightest minds</p>
             <a href="https://qral.com" target="_blank">View Project</a>
         </div>
-
-
     </div>
 </section>
-
 <section id="contact">
     <h2>Contact</h2>
     <p>Email: jitendraearth27@gmail.com</p>
     <p>LinkedIn: https://www.linkedin.com/in/jitendrawp/</p>
 </section>
-
-<footer>
-    <p>© 2026 Jitendra Chouhan</p>
-</footer>
-
+<footer><p>© 2026 Jitendra Chouhan</p></footer>
 </body>
 </html>
