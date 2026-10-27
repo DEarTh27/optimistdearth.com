@@ -3,164 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jitendra Chouhan | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --bg:#050816;
-            --bg2:#0f172a;
-            --card:rgba(255,255,255,.06);
-            --border:rgba(255,255,255,.08);
-            --text:#e5e7eb;
-            --muted:#94a3b8;
-            --blue:#38bdf8;
-            --violet:#8b5cf6;
-            --pink:#ec4899;
-        }
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-html{ scroll-behavior:smooth; }
-body{ font-family:'Inter',sans-serif; color:var(--text); background: radial-gradient(circle at 10% 10%, rgba(56,189,248,.18), transparent 25%), radial-gradient(circle at 90% 20%, rgba(139,92,246,.16), transparent 30%), radial-gradient(circle at 50% 100%, rgba(236,72,153,.12), transparent 30%), linear-gradient(135deg,#030712,#0f172a 45%,#111827); min-height:100vh; overflow-x:hidden; }
-body:before{ content:""; position:fixed; inset:0; pointer-events:none; background:linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px); background-size:32px 32px; mask-image:linear-gradient(to bottom,rgba(0,0,0,.3),transparent); }
-a{ text-decoration:none; color:inherit; }
-img{ max-width:100%; display:block; }
-.container{ width:min(1320px,92%); margin:auto; }
-/* NAV */
-nav{ position:fixed; top:18px; left:50%; transform:translateX(-50%); width:min(1320px,92%); padding:16px 26px; display:flex; align-items:center; justify-content:space-between; background:rgba(8,15,35,.65); backdrop-filter:blur(18px); border:1px solid var(--border); border-radius:22px; z-index:999; box-shadow:0 20px 50px rgba(0,0,0,.28); }
-.logo{ font-size:1.1rem; font-weight:800; letter-spacing:.5px; }
-.logo span{ background:linear-gradient(90deg,var(--blue),var(--violet)); -webkit-background-clip:text; color:transparent; }
-.nav-links{ display:flex; gap:24px; }
-.nav-links a{ font-size:.95rem; color:#cbd5e1; transition:.25s; }
-.nav-links a:hover{ color:#fff; }
-/* HERO */
-.hero{ padding:180px 0 110px; position:relative; }
-.hero-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center; }
-.badge{ display:inline-flex; gap:8px; align-items:center; padding:10px 16px; border-radius:999px; background:rgba(255,255,255,.05); border:1px solid var(--border); font-size:.9rem; color:#cbd5e1; margin-bottom:24px; }
-.dot{ width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 12px #22c55e; }
-.hero h1{ font-size:clamp(3rem,7vw,6rem); line-height:.95; font-weight:800; letter-spacing:-2px; margin-bottom:18px; background:linear-gradient(90deg,#fff,#93c5fd,#c4b5fd,#f9a8d4); -webkit-background-clip:text; color:transparent; }
-.hero p{ font-size:1.15rem; color:#cbd5e1; line-height:1.8; max-width:720px; }
-.hero-actions{ margin-top:34px; display:flex; gap:16px; flex-wrap:wrap; }
-.btn{ padding:14px 22px; border-radius:14px; font-weight:600; font-size:.95rem; border:1px solid var(--border); background:rgba(255,255,255,.05); transition:.3s cubic-bezier(.22,1,.36,1); }
-.btn:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(0,0,0,.25); }
-.btn.primary{ background:linear-gradient(90deg,var(--blue),var(--violet)); border:none; color:#fff; }
-.hero-card{ padding:28px; border-radius:28px; background:var(--card); backdrop-filter:blur(18px); border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,.28); }
-.stat{ padding:18px 0; border-bottom:1px solid rgba(255,255,255,.06); }
-.stat:last-child{ border:none; }
-.stat h3{ font-size:2rem; margin-bottom:4px; }
-.stat p{ font-size:.95rem; color:var(--muted); }
-/* SECTION */
-section{ padding:90px 0; }
-.section-title{ font-size:2.3rem; font-weight:800; margin-bottom:14px; letter-spacing:-1px; }
-.section-sub{ color:var(--muted); margin-bottom:34px; line-height:1.7; }
-/* GLASS CARD */
-.card{ position:relative; padding:28px; border-radius:26px; background:var(--card); backdrop-filter:blur(18px); border:1px solid var(--border); box-shadow:0 20px 50px rgba(0,0,0,.20); transition:.35s cubic-bezier(.22,1,.36,1); overflow:hidden; }
-.card:hover{ transform:translateY(-8px); box-shadow:0 30px 60px rgba(0,0,0,.30); }
-.card:before{ content:""; position:absolute; inset:0; background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 30%); pointer-events:none; }
-/* ABOUT */
-.about-box{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-.about-box .card p{ line-height:1.9; color:#dbeafe; }
-/* EXPERIENCE */
-.timeline{ display:grid; gap:22px; }
-.exp-top{ display:flex; justify-content:space-between; gap:20px; align-items:center; margin-bottom:18px; }
-.company img{ max-width:180px; max-height:80px; width:auto; height:auto; object-fit:contain; padding:10px; }
-.company{ display:flex; align-items:center; gap:20px; }
-.company > a { box-shadow: 0px 0px 10px 1px #387ea1; padding: 10px; border-radius: 5px; }
-.timeline .card:not(:first-child) .company > a { background: #fff; }
-.company h3{ font-size:1.1rem; margin-bottom:4px; }
-.company p{ font-size:.95rem; color:var(--muted); }
-.date-pill{ padding:10px 14px; border-radius:999px; font-size:.85rem; background:rgba(56,189,248,.12); border:1px solid rgba(56,189,248,.22); color:#c7f0ff; white-space:nowrap; }
-.exp-desc{ color:#d1d5db; line-height:1.8; }
-/* SKILLS */
-.skills{ display:flex; flex-wrap:wrap; gap:14px; }
-.skill{ padding:12px 18px; border-radius:999px; background:rgba(255,255,255,.05); border:1px solid var(--border); color:#cbd5e1; font-size:.92rem; transition:.3s; }
-.skill:hover{ transform:translateY(-4px); background:linear-gradient(90deg,var(--blue),var(--violet)); color:#fff; box-shadow:0 0 25px rgba(56,189,248,.28); }
-/* PROJECTS */
-.grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; }
-.project img{ height:220px; width:100%; object-fit:cover; border-radius:18px; margin-bottom:18px; transition:.55s; }
-.project:hover img{ transform:scale(1.05); }
-.project h3{ font-size:1.2rem; margin-bottom:10px; }
-.project p{ color:var(--muted); line-height:1.75; font-size:.95rem; margin-bottom:16px; }
-.project a{ display:inline-flex; gap:8px; align-items:center; font-weight:600; color:#c7f0ff; }
-/* CONTACT */
-.contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-.contact-card h3{ font-size:1rem; margin-bottom:10px; }
-.contact-card p,
-.contact-card a{ color:var(--muted); line-height:1.8; word-break:break-word; }
-/* FOOTER */
-footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
-.profile-wrap{ position:relative; margin-bottom:22px; }
-.profile-wrap:before{ content:""; position:absolute; inset:-10px; border-radius:28px; background:linear-gradient(135deg, rgba(56,189,248,.45), rgba(139,92,246,.35), rgba(236,72,153,.25)); filter:blur(18px); opacity:.85; z-index:0; }
-.profile-pic{ position:relative; z-index:1; width:100%; height:360px; object-fit:cover; object-position:center top; border-radius:24px; border:1px solid rgba(255,255,255,.10); box-shadow:0 25px 60px rgba(0,0,0,.35); }
-.hero-card{ overflow:visible; }
-.hero-name{ font-size:1.45rem; font-weight:800; margin-bottom:6px; text-align:center; }
-.hero-role{ text-align:center; color:var(--muted); margin-bottom:18px; font-size:.95rem; }
-
-/* MOBILE */
-@media(max-width:980px){
-    .hero-grid,
-    .about-box,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:768px){
-    nav{ padding:14px 18px; }
-    .nav-links{ display:none; }
-    .hero{ padding-top:150px; }
-    .section-title{ font-size:2rem; }
-    .exp-top{ flex-direction:column; align-items:flex-start; }
-    .grid{ grid-template-columns:1fr; }
-    .profile-pic{ height:300px; }
-}
-</style>
+    <title>Jitendra Chouhan | Full Stack Developer & Team Lead</title>
+    <meta name="description" content="Jitendra Chouhan's portfolio: full stack development, PHP, WordPress, APIs, team leadership, and selected client projects.">
+    <meta name="theme-color" content="#f4f2eb">
+    <meta property="og:title" content="Jitendra Chouhan | Full Stack Developer & Team Lead">
+    <meta property="og:description" content="Explore experience, technical skills, and selected development projects.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
 </head>
 <body>
-    <nav>
-        <div class="logo"><a href="#top" class="logo">Jitendra Chouhan<span> Senior Full Stack Developer</span></a></div>
-        <div class="nav-links">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav aria-label="Main navigation">
+        <a href="#top" class="logo" aria-label="Jitendra Chouhan, home"><span class="monogram">jc<span>↗</span></span><span class="wordmark">JITENDRA<br>CHOUHAN<span class="wordmark-dot">.</span></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-links" hidden>Menu</button>
+        <div class="nav-links" id="navigation-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
         </div>
     </nav>
+    <main id="main" tabindex="-1">
     <header class="hero" id="top">
         <div class="container hero-grid">
             <div>
-                <div class="badge"><span class="dot"></span> Freelancer & Available for new full time opportunities</div>
-                <h1>Building Scalable Digital Products</h1>
+                <div class="badge"><span class="dot"></span> OPEN FOR FREELANCE & FULL-TIME OPPORTUNITIES</div>
+                <div class="hero-kicker">DEVELOPER. TEAM LEAD. PROBLEM SOLVER.</div><h1>Good ideas.<br><span>Built</span> right<span class="period">.</span></h1>
                 <p>Team Lead & Full Stack Developer with 8+ years of experience delivering scalable web applications, business automation systems, custom WordPress platforms, APIs, and AI-assisted digital solutions for global clients. Building smarter products with code + AI.</p>
-                <div class="hero-actions"><a href="mailto:jitendraearth27@gmail.com" class="btn primary">Hire Me</a><a href="https://www.linkedin.com/in/jitendrawp/" target="_blank" class="btn">LinkedIn</a><a href="tel:+919575512686" class="btn">Call: +91 95755 12686</a></div>
+                <div class="hero-actions"><a href="mailto:jitendraearth27@gmail.com" class="btn primary">Let’s build something <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/jitendrawp/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a><a href="tel:+919575512686" class="btn">Call: +91 95755 12686</a></div>
             </div>
 
-            <div class="hero-card">
-                <div class="profile-wrap">
-                    <img src="images/profile_pic.png" alt="Jitendra Chouhan" class="profile-pic">
-                </div>
-
-                <div class="hero-name">Jitendra Chouhan</div>
-                <div class="hero-role">Senior Full Stack Developer • Team Lead</div>
-
-                <div class="stat"><h3>8+</h3><p>Years of Experience</p></div>
-                <div class="stat"><h3>50+</h3><p>Projects Delivered</p></div>
-                <div class="stat"><h3>Full Stack</h3><p>PHP • WordPress • CodeIgniter • APIs • AI</p></div>
-                <div class="stat"><h3>Team Lead</h3><p>Team Management & Client Communication</p></div>
+            <div class="hero-art" aria-label="Illustration of connected design, code, and delivery layers" role="img">
+                <div class="art-label"><span class="dot"></span> FROM FIRST IDEA TO FINAL BUILD</div>
+                <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+                <div class="art-cross cross-one">+</div><div class="art-cross cross-two">+</div>
+                <div class="stack-layer layer-back"><span>01 / THINK</span><b>Clear thinking.</b><i>Strategy → Architecture</i></div>
+                <div class="stack-layer layer-middle"><span>02 / BUILD</span><b>&lt;make it work /&gt;</b><i>PHP · WordPress · APIs</i></div>
+                <div class="stack-layer layer-front"><span>03 / DELIVER</span><b>Made to matter<span>↗</span></b><i>Products with purpose.</i></div>
+                <div class="art-footer"><span>CREATIVE MIND. ENGINEERING DISCIPLINE.</span><span>JC—01</span></div>
             </div>
-
         </div>
     </header>
 
+    <div class="proof-strip"><div class="container proof-inner"><div><strong>8+</strong><span>Years of experience</span></div><div><strong>50+</strong><span>Projects delivered</span></div><div><strong>Full stack.</strong><span>From architecture to interface</span></div><a href="#projects">EXPLORE THE WORK <span>↓</span></a></div></div>
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title"><span class="section-index">01 / THE APPROACH</span>Engineering with<br>a human perspective.</h2>
             <p class="section-sub">Practical engineering mindset focused on clean architecture, performance and business outcomes.</p>
 
-            <div class="about-box">
+            <div class="about-portrait"><img src="images/profile_pic.png" alt="Jitendra Chouhan" width="240" height="240" loading="lazy" decoding="async"><div><span class="section-index">THE PERSON BEHIND THE CODE</span><h3>Jitendra Chouhan</h3><p>Senior Full Stack Developer · Team Lead</p></div></div><div class="about-box">
                 <div class="card">
                 <p>With over 8 years of professional experience, I specialize in building high-performance digital products that combine strong backend architecture, intuitive user experiences, and business-focused execution.</p>
                 </div>
@@ -180,9 +74,55 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
         </div>
     </section>
 
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">02 / SELECTED WORK</span>Ideas out in<br>the real world<span class="accent">.</span></h2>
+            <p class="section-sub">A selection of real-world products and websites built for clients.</p>
+
+            <div class="grid">
+
+                <article class="card project project-1"><a class="project-thumbnail" href="https://somirealty.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Somi Realty Inc. (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">somirealty.com</span></div><img src="images/somirealty.com.png" alt="Somi Realty Inc. website screenshot" loading="lazy" decoding="async" data-fallback="Somi Realty Inc. — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Somi Realty Inc.</h3>
+                    <p>Modern real estate platform focused on listings, lead generation and growth.</p>
+                    <a href="https://somirealty.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+
+                <article class="card project project-2"><a class="project-thumbnail" href="https://qralventures.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Ventures (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qralventures.com</span></div><img src="images/qralventures.com.png" alt="Qral Ventures website screenshot" loading="lazy" decoding="async" data-fallback="Qral Ventures — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Ventures</h3>
+                    <p>Healthcare innovation and investment platform with premium branding.</p>
+                    <a href="https://qralventures.com/" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+
+                <article class="card project project-3"><a class="project-thumbnail" href="https://bluedotbio.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Bluedot Bio (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">bluedotbio.com</span></div><img src="images/bluedotbio.com.png" alt="Bluedot Bio website screenshot" loading="lazy" decoding="async" data-fallback="Bluedot Bio — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Bluedot Bio</h3>
+                    <p>Biotechnology company producing first-in-class drugs and platforms.</p>
+                    <a href="https://bluedotbio.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+
+                <article class="card project project-4"><a class="project-thumbnail" href="https://qral.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qral.com</span></div><img src="images/qral.com.png" alt="Qral Group website screenshot" loading="lazy" decoding="async" data-fallback="Qral Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Group</h3>
+                    <p>Corporate group website showcasing innovation and growth ecosystem.</p>
+                    <a href="https://qral.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+
+                <article class="card project project-5"><a class="project-thumbnail" href="https://ikaikatherapeutics.com" target="_blank" rel="noopener noreferrer" aria-label="Visit ikaika Therapeutics (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">ikaikatherapeutics.com</span></div><img src="images/ikaikatherapeutics.com.png" alt="ikaika Therapeutics website screenshot" loading="lazy" decoding="async" data-fallback="ikaika Therapeutics — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>ikaika Therapeutics</h3>
+                    <p>First-in-class, Anti-Fibrotic Biologics, Advancing therapies designed from genetic signals</p>
+                    <a href="https://ikaikatherapeutics.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+
+                <article class="card project project-6"><a class="project-thumbnail" href="https://windowtx.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Window Therapeutics (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">windowtx.com</span></div><img src="images/windowtx.com.png" alt="Window Therapeutics website screenshot" loading="lazy" decoding="async" data-fallback="Window Therapeutics — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Window Therapeutics</h3>
+                    <p>Opening the window to better outcomes for patients</p>
+                    <a href="https://windowtx.com/" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+                <article class="card project project-7"><a class="project-thumbnail" href="https://qral.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qral.com</span></div><img src="images/qral.com.png" alt="Qral Group website screenshot" loading="lazy" decoding="async" data-fallback="Qral Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Group</h3>
+                    <p>At Qral Group, we bring together the brightest minds</p>
+                    <a href="https://qral.com" target="_blank" rel="noopener noreferrer">View Project</a></article>
+                <article class="card project project-8"><a class="project-thumbnail" href="https://caeruslabs.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Careus Labs (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">caeruslabs.com</span></div><img src="images/caeruslabs.com.png" alt="Careus Labs website screenshot" loading="lazy" decoding="async" data-fallback="Careus Labs — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Careus Labs</h3>
+                    <p>Concierge organization to serve your unique research needs</p>
+                    <a href="https://caeruslabs.com/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+                <article class="card project project-9"><a class="project-thumbnail" href="https://www.detectivegroup.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Detective Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">www.detectivegroup.in</span></div><img src="images/detectivegroup.in.png" alt="Detective Group website screenshot" loading="lazy" decoding="async" data-fallback="Detective Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Detective Group</h3>
+                    <p>Confidential Investigation, all type of Detective Services</p>
+                    <a href="https://www.detectivegroup.in/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+                <article class="card project project-10"><a class="project-thumbnail" href="https://www.omrglobal.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit OMR Global (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">www.omrglobal.com</span></div><img src="images/omrglobal.com.png" alt="OMR Global website screenshot" loading="lazy" decoding="async" data-fallback="OMR Global — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>OMR Global</h3>
+                    <p>Access proprietary datasets and expert analyst insights to reduce uncertainty and strengthen your strategy.</p>
+                    <a href="https://www.omrglobal.com/" target="_blank" rel="noopener noreferrer">View Project</a></article>
+
+            </div>
+        </div>
+    </section>
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title"><span class="section-index">03 / THE JOURNEY</span>Built on experience.</h2>
             <p class="section-sub">Career journey across agencies, product teams and enterprise client projects.</p>
 
             <div class="timeline">
@@ -190,10 +130,10 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
                 <div class="card">
                     <div class="exp-top">
                         <div class="company">
-                            <a href="https://deaninfotech.com" target="_blank"><img src="images/dean-logo.avif"></a>
+                            <a href="https://deaninfotech.com" target="_blank" rel="noopener noreferrer"><img class="company-logo" src="images/dean-logo.avif" alt="Dean Infotech" loading="lazy" decoding="async" data-fallback="Dean Infotech"></a>
                             <div>
                                 <h3>Team Lead - PHP Developer</h3>
-                                <a href="https://deaninfotech.com" target="_blank"><p>Dean Infotech</p></a>
+                                <a href="https://deaninfotech.com" target="_blank" rel="noopener noreferrer"><p>Dean Infotech</p></a>
                             </div>
                         </div>
                         <div class="date-pill">2021 - Present</div>
@@ -206,10 +146,10 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
                 <div class="card">
                     <div class="exp-top">
                         <div class="company">
-                            <a href="https://qral.com" target="_blank"><img src="images/qral-logo.svg"></a>
+                            <a href="https://qral.com" target="_blank" rel="noopener noreferrer"><img class="company-logo" src="images/qral-logo.svg" alt="Qral Group" loading="lazy" decoding="async" data-fallback="Qral Group"></a>
                             <div>
                                 <h3>WordPress Developer</h3>
-                                <a href="https://qral.com" target="_blank"><p>Qral Group</p></a>
+                                <a href="https://qral.com" target="_blank" rel="noopener noreferrer"><p>Qral Group</p></a>
                             </div>
                         </div>
                         <div class="date-pill">2022 - Present</div>
@@ -222,10 +162,10 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
                 <div class="card">
                     <div class="exp-top">
                         <div class="company">
-                            <a href="https://capitalnumbers.com" target="_blank"><img src="images/capital-numbers-logo.svg"></a>
+                            <a href="https://capitalnumbers.com" target="_blank" rel="noopener noreferrer"><img class="company-logo" src="images/capital-numbers-logo.svg" alt="Capital Numbers" loading="lazy" decoding="async" data-fallback="Capital Numbers"></a>
                             <div>
                                 <h3>Software Engineer</h3>
-                                <a href="https://capitalnumbers.com" target="_blank"><p>Capital Numbers</p></a>
+                                <a href="https://capitalnumbers.com" target="_blank" rel="noopener noreferrer"><p>Capital Numbers</p></a>
                             </div>
                         </div>
                         <div class="date-pill">2020</div>
@@ -239,10 +179,10 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
                 <div class="card">
                     <div class="exp-top">
                         <div class="company">
-                            <a href="https://quazma.com" target="_blank"><img src="images/quazma-logo.svg"></a>
+                            <a href="https://quazma.com" target="_blank" rel="noopener noreferrer"><img class="company-logo" src="images/quazma-logo.svg" alt="Quazma Techno Solutions" loading="lazy" decoding="async" data-fallback="Quazma Techno Solutions"></a>
                             <div>
                                 <h3>Web Developer</h3>
-                                <a href="https://quazma.com" target="_blank">Quazma Techno Solutions<</a>
+                                <a href="https://quazma.com" target="_blank" rel="noopener noreferrer">Quazma Techno Solutions</a>
                             </div>
                         </div>
                         <div class="date-pill">2018 -2020</div>
@@ -256,10 +196,10 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
                 <div class="card">
                     <div class="exp-top">
                         <div class="company">
-                            <a href="https://softgridcomputers.com" target="_blank"><img src="images/genx-softgrid-logo.svg"></a>
+                            <a href="https://softgridcomputers.com" target="_blank" rel="noopener noreferrer"><img class="company-logo" src="images/genx-softgrid-logo.svg" alt="Softgrid Computers" loading="lazy" decoding="async" data-fallback="Softgrid Computers"></a>
                             <div>
                                 <h3>PHP Developer</h3>
-                                <a href="https://softgridcomputers.com" target="_blank"><p>Softgrid Computers</p></a>
+                                <a href="https://softgridcomputers.com" target="_blank" rel="noopener noreferrer"><p>Softgrid Computers</p></a>
                             </div>
                         </div>
                         <div class="date-pill">2017 -2018</div>
@@ -275,7 +215,7 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
 
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title"><span class="section-index">04 / THE TOOLKIT</span>The right tools.<br>The bigger picture.</h2>
             <p class="section-sub">Modern technologies, frameworks and AI tools used to build fast, scalable and future-ready digital products.</p>
 
             <div class="skills">
@@ -317,86 +257,11 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-sub">A selection of real-world products and websites built for clients.</p>
 
-            <div class="grid">
-
-                <div class="card project">
-                    <img src="images/somirealty.com.png">
-                    <h3>Somi Realty Inc.</h3>
-                    <p>Modern real estate platform focused on listings, lead generation and growth.</p>
-                    <a href="https://somirealty.com" target="_blank">Visit Project →</a>
-                </div>
-
-                <div class="card project">
-                    <img src="images/qralventures.com.png">
-                    <h3>Qral Ventures</h3>
-                    <p>Healthcare innovation and investment platform with premium branding.</p>
-                    <a href="https://qralventures.com/" target="_blank">Visit Project →</a>
-                </div>
-
-                <div class="card project">
-                    <img src="images/bluedotbio.com.png">
-                    <h3>Bluedot Bio</h3>
-                    <p>Biotechnology company producing first-in-class drugs and platforms.</p>
-                    <a href="https://bluedotbio.com" target="_blank">Visit Project →</a>
-                </div>
-
-                <div class="card project">
-                    <img src="images/qral.com.png">
-                    <h3>Qral Group</h3>
-                    <p>Corporate group website showcasing innovation and growth ecosystem.</p>
-                    <a href="https://qral.com" target="_blank">Visit Project →</a>
-                </div>
-
-                <div class="card project">
-                    <img src="images/ikaikatherapeutics.com.png">
-                    <h3>ikaika Therapeutics</h3>
-                    <p>First-in-class, Anti-Fibrotic Biologics, Advancing therapies designed from genetic signals</p>
-                    <a href="https://ikaikatherapeutics.com" target="_blank">Visit Project →</a>
-                </div>
-
-                <div class="card project">
-                    <img src="images/windowtx.com.png">
-                    <h3>Window Therapeutics</h3>
-                    <p>Opening the window to better outcomes for patients</p>
-                    <a href="https://window.com" target="_blank">Visit Project →</a>
-                </div>
-                <div class="card project">
-                    <img src="images/qral.com.png" />
-                    <h3>Qral Group</h3>
-                    <p>At Qral Group, we bring together the brightest minds</p>
-                    <a href="https://qral.com" target="_blank">View Project</a>
-                </div>
-                <div class="card project">
-                    <img src="images/caeruslabs.com.png" />
-                    <h3>Careus Labs</h3>
-                    <p>Concierge organization to serve your unique research needs</p>
-                    <a href="https://caeruslabs.com/" target="_blank">View Project</a>
-                </div>
-                <div class="card project">
-                    <img src="images/detectivegroup.in.png" />
-                    <h3>Detective Group</h3>
-                    <p>Confidential Investigation, all type of Detective Services</p>
-                    <a href="https://www.detectivegroup.in/" target="_blank">View Project</a>
-                </div>
-                <div class="card project">
-                    <img src="images/omrglobal.com.png" />
-                    <h3>OMR Global</h3>
-                    <p>Access proprietary datasets and expert analyst insights to reduce uncertainty and strengthen your strategy.</p>
-                    <a href="https://www.omrglobal.com/" target="_blank">View Project</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title"><span class="section-index">05 / YOUR NEXT CHAPTER</span>Have something<br>in mind<span class="accent">?</span></h2>
             <p class="section-sub">Let’s build your next website, platform, AI-powered workflow, or business automation system.</p>
 
             <div class="contact-grid">
@@ -408,7 +273,7 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
 
                 <div class="card contact-card">
                     <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/jitendrawp/" target="_blank">linkedin.com/in/jitendrawp</a></p>
+                    <p><a href="https://www.linkedin.com/in/jitendrawp/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jitendrawp</a></p>
                 </div>
 
                 <div class="card contact-card">
@@ -420,11 +285,13 @@ footer{ padding:40px 0 60px; text-align:center; color:#64748b; }
         </div>
     </section>
 
+    </main>
     <footer>
         <div class="container">
-            © 2026 Jitendra Chouhan • Crafted with precision
+            <a href="#top" class="footer-name">Jitendra Chouhan<span>↗</span></a><span>© 2026 · Thoughtfully built.</span><a href="#top">BACK TO TOP ↑</a>
         </div>
     </footer>
 
+    <script src="app.js" defer></script>
 </body>
 </html>
