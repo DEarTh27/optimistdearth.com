@@ -3,6 +3,8 @@ const links = document.querySelector('#navigation-links');
 const mobile = window.matchMedia('(max-width: 768px)');
 function setMenu(open) {
   toggle.setAttribute('aria-expanded', String(open));
+  toggle.querySelector('.menu-label').textContent = open ? 'Close' : 'Menu';
+  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   links.dataset.collapsed = String(mobile.matches && !open);
 }
 toggle.hidden = false;
@@ -357,7 +359,11 @@ function resizeAmbient() {
   ambientCanvas.height = Math.round(ambientHeight * ambientDpr);
   ambientContext.setTransform(ambientDpr, 0, 0, ambientDpr, 0, 0);
   const area = ambientWidth * ambientHeight;
-  ambientStars = Array.from({ length: Math.min(1100, Math.max(420, Math.round(area / 2500))) }, () => ({
+  const compactCanvas = window.matchMedia('(max-width: 600px)').matches;
+  const starCount = compactCanvas
+    ? Math.min(720, Math.max(300, Math.round(area / 3000)))
+    : Math.min(1100, Math.max(420, Math.round(area / 2500)));
+  ambientStars = Array.from({ length: starCount }, () => ({
     x: Math.random() * ambientWidth,
     y: Math.random() * ambientHeight,
     vx: 0,
@@ -368,7 +374,9 @@ function resizeAmbient() {
     twinkleSpeed: .002 + Math.random() * .002,
     color: ['220, 232, 255', '255, 225, 190', '188, 205, 255'][Math.floor(Math.random() * 3)]
   }));
-  const dustCount = Math.min(3200, Math.max(1200, Math.round(area / 650)));
+  const dustCount = compactCanvas
+    ? Math.min(1900, Math.max(700, Math.round(area / 900)))
+    : Math.min(3200, Math.max(1200, Math.round(area / 650)));
   ambientDust = Array.from({ length: dustCount }, () => {
     const x = Math.random() * ambientWidth;
     const band = ambientHeight * (.48 - x / ambientWidth * .32);
