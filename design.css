@@ -348,6 +348,16 @@ footer{font-size:12px}
   nav .nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 8px;padding:12px 0 4px;font-size:15px}
   nav .nav-links a{min-height:48px;padding:10px 12px;display:flex;align-items:center;border:1px solid rgba(170,196,255,.13);border-radius:8px;background:rgba(24,34,67,.62)}
   nav .nav-links .nav-contact{justify-content:space-between;border:1px solid rgba(255,151,129,.4);background:rgba(111,55,100,.3)}
+  .timeline{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;border-top:0}
+  .timeline>.card{display:flex;flex-direction:column;gap:0;margin:0;padding:20px;border-radius:12px}
+  .exp-top{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid rgba(200,215,255,.16)}
+  .company{align-items:flex-start;gap:12px}
+  .company h3{font-size:20px;line-height:1.35;letter-spacing:-.3px}
+  .company p,.company>div>a{font-size:15px;line-height:1.45}
+  .date-pill{font-size:12px;line-height:1.4}
+  .exp-desc{padding-top:0;font-size:16px;line-height:1.7}
+  .about-box{gap:14px}
+  .about-box .card{margin:0;padding:18px;border-radius:12px}
 }
 @media(max-width:360px){
   .container,nav{width:calc(100% - 32px)}
@@ -360,6 +370,11 @@ footer{font-size:12px}
   .art-footer{font-size:12px;bottom:8px}
   .proof-inner strong{font-size:29px}
   .company>a{width:72px;height:56px}
+  .timeline{gap:14px}
+  .timeline>.card{padding:17px}
+  .exp-top{gap:9px;padding-bottom:12px;margin-bottom:12px}
+  .about-box{gap:12px}
+  .about-box .card{padding:16px}
 }
 @media(hover:none),(pointer:coarse){
   .hero-art:hover .stack-layer,.project:hover .project-shape,.contact-card:hover,.skill:hover{transform:none}
