@@ -714,6 +714,7 @@
         ctx.translate(x, y);
         ctx.rotate(plane.angle);
         ctx.scale(plane.direction, 1);
+        ctx.scale(3, 3);
         ctx.fillStyle = 'rgba(255, 245, 224, .96)';
         ctx.shadowColor = 'rgba(255, 225, 170, .95)';
         ctx.shadowBlur = 6 + strobe * 10;
@@ -782,7 +783,8 @@
         ctx.translate(x, y);
         ctx.rotate(satellite.angle);
         ctx.scale(satellite.direction, 1);
-        ctx.globalAlpha = .72 + glint * .28;
+        ctx.scale(3, 3);
+        ctx.globalAlpha = .86 + glint * .14;
         ctx.shadowColor = '#8ccfff';
         ctx.shadowBlur = 4 + glint * 9;
         ctx.fillStyle = '#74baf2';
