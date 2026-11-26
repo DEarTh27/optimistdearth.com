@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jitendra Chouhan | Full Stack Developer & Team Lead</title>
-    <meta name="description" content="Jitendra Chouhan's portfolio: full stack development, PHP, WordPress, APIs, team leadership, and selected client projects.">
-    <meta name="theme-color" content="#f4f2eb">
-    <meta property="og:title" content="Jitendra Chouhan | Full Stack Developer & Team Lead">
-    <meta property="og:description" content="Explore experience, technical skills, and selected development projects.">
+    <title>Jitendra Chouhan | Senior Software Engineer &amp; PHP Developer</title>
+    <meta name="description" content="Senior Software Engineer, PHP Developer and Technical Lead with 9+ years in business applications, WordPress, Laravel, REST APIs, MLS integrations and AI-assisted development.">
+    <meta name="theme-color" content="#0b1022">
+    <link rel="canonical" href="https://optimistdearth.com/">
+    <meta property="og:title" content="Jitendra Chouhan | Senior Software Engineer &amp; PHP Developer">
+    <meta property="og:description" content="9+ years building and improving business applications, PHP platforms, API integrations and websites for international clients.">
     <meta property="og:type" content="website">
-     <!-- Replace G-XXXXXXXXXX with the Google Analytics 4 measurement ID for optimistdearth.co. -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <meta property="og:url" content="https://optimistdearth.com/">
+    <meta property="og:image" content="https://optimistdearth.com/images/profile_pic.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jitendra Chouhan | Senior Software Engineer &amp; PHP Developer">
+    <meta name="twitter:description" content="9+ years building and improving business applications, PHP platforms and API integrations.">
+     <!-- Google Analytics 4 measurement ID. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTZPXQNLP2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -21,6 +27,116 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="skills-lifecycle.css">
+    <style>
+        .hero .editorial-heading {
+            font-size: clamp(2.25rem, 5.2vw, 5.5rem);
+            white-space: nowrap;
+            letter-spacing: -.065em;
+        }
+        .hero .editorial-heading em {
+            font-family: Georgia, serif;
+            font-weight: 400;
+            color: var(--orange);
+        }
+        .hero .hero-intro { font-size: 1rem; line-height: 1.7; }
+        #projects .featured-project {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+            align-items: center;
+            gap: clamp(1rem, 4vw, 3.5rem);
+            padding: clamp(1rem, 2.4vw, 2rem);
+        }
+        .featured-project > a.project-thumbnail { margin: 0; }
+        .featured-project .project-thumbnail > img {
+            height: auto;
+            aspect-ratio: 16 / 10;
+        }
+        .featured-project h3 {
+            font-family: Georgia, serif;
+            font-size: clamp(1.8rem, 3.7vw, 3.5rem);
+            line-height: 1.05;
+        }
+        .featured-project .feature-category {
+            color: var(--orange);
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+        .featured-project .feature-copy p { max-width: 46ch; }
+        .featured-project .feature-link { text-decoration: underline; text-underline-offset: .25em; }
+        @media (max-width: 768px) {
+            #projects .featured-project { grid-template-columns: minmax(0, 1fr); }
+            .hero .editorial-heading { font-size: clamp(1.8rem, 8vw, 3.75rem); }
+        }
+
+        #skills .phase-jump {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .55rem;
+            margin: 0 0 2rem;
+            padding: 0;
+            list-style: none;
+        }
+        #skills .phase-jump a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: .45rem .9rem;
+            border: 1px solid #75baff60;
+            border-radius: 999px;
+            color: var(--ink);
+            background: #15243f;
+        }
+        #skills .phase-jump a:is(:hover, :focus-visible) {
+            border-color: #75baff;
+            background: #244269;
+        }
+        #skills .sdlc-step { scroll-margin-top: 7rem; }
+        @media (prefers-reduced-motion: no-preference) {
+            #skills .sdlc-step { scroll-margin-top: max(7rem, 42vh); }
+        }
+        #skills .sdlc-step:target .sdlc-card,
+        #skills .sdlc-step:focus-visible .sdlc-card {
+            outline: 2px solid var(--phase);
+            outline-offset: 3px;
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            #skills .phase-jump a {
+                transition: translate .3s ease, background-color .3s ease, border-color .3s ease;
+            }
+            #skills .sdlc-card {
+                transition: translate .45s cubic-bezier(.16, 1, .3, 1), border-color .3s, box-shadow .35s;
+            }
+            #skills .sdlc-scene,
+            #skills .sdlc-handoff i {
+                transition: translate .5s cubic-bezier(.16, 1, .3, 1);
+            }
+            .featured-project .feature-link {
+                display: inline-block;
+                transition: translate .35s cubic-bezier(.16, 1, .3, 1), color .25s;
+            }
+            @media (hover: hover) and (pointer: fine) {
+                #skills .phase-jump a:hover { translate: 0 -3px; }
+                #skills .sdlc-card:hover { translate: 0 -4px; }
+                #skills .sdlc-card:hover .sdlc-scene > g { translate: 0 -4px; }
+                #skills .sdlc-card:hover .sdlc-handoff i,
+                .featured-project .feature-link:hover { translate: 4px -2px; }
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jitendra Chouhan",
+      "url": "https://optimistdearth.com/",
+      "image": "https://optimistdearth.com/images/profile_pic.png",
+      "jobTitle": "Senior Software Engineer | PHP Developer | Team Lead",
+      "sameAs": ["https://www.linkedin.com/in/jitendrawp/"]
+    }
+    </script>
 </head>
 <body>
     <canvas class="code-ambient" aria-hidden="true"></canvas>
@@ -30,10 +146,11 @@
         <a href="#top" class="logo" aria-label="Jitendra Chouhan, home"><span class="monogram">jc<span>↗</span></span><span class="wordmark">JITENDRA<br>CHOUHAN<span class="wordmark-dot">.</span></span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-links" aria-label="Open navigation" hidden><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span></button>
         <div class="nav-links" id="navigation-links">
+            <a href="#projects">Projects</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="#ai-development">AI workflow</a>
             <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
         </div>
     </nav>
@@ -41,17 +158,24 @@
     <header class="hero" id="top">
         <div class="container hero-grid">
             <div>
-                <div class="badge"><span class="dot"></span> OPEN FOR FREELANCE & FULL-TIME OPPORTUNITIES</div>
-                <div class="hero-kicker">DEVELOPER. TEAM LEAD. PROBLEM SOLVER.</div><h1>Good ideas.<br><span>Built</span> right<span class="period">.</span></h1>
-                <p>Team Lead & Full Stack Developer with 9+ years of experience delivering scalable web applications, business automation systems, custom WordPress platforms, APIs, and AI-assisted digital solutions for global clients. Building smarter products with code + AI.</p>
-                <div class="hero-actions"><a href="mailto:jitendraearth27@gmail.com" class="btn primary">Let’s build something <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/jitendrawp/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a><a href="https://wa.me/optimist_dearth" target="_blank" rel="noopener noreferrer" class="btn">Chat on WhatsApp <span aria-hidden="true">↗</span></a></div>
+                <div class="badge"><span class="dot"></span> OPEN TO REMOTE ROLES &amp; SELECT CLIENT WORK</div>
+                <div class="hero-kicker">JITENDRA CHOUHAN · FULL STACK DEVELOPER &amp; TEAM LEAD</div>
+                <h1 class="editorial-heading">I build and lead<br><em>web projects.</em></h1>
+                <p class="hero-intro">I’m a freelance PHP developer with 9+ years of experience. I build WordPress sites, business applications, and API integrations, and help clients take projects from requirements to release.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn primary">Explore selected work <span aria-hidden="true">↓</span></a>
+                    <a href="#contact" class="btn">Let’s talk <span aria-hidden="true">↗</span></a>
+                    <a href="mailto:jitendraearth27@gmail.com" class="btn primary">Let’s build something <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/jitendrawp/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+                    <a href="https://wa.me/optimist_dearth" target="_blank" rel="noopener noreferrer" class="btn">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
+                </div>
             </div>
 
             <div class="hero-art" aria-label="Illustration of connected design, code, and delivery layers" role="img">
                 <div class="art-label"><span class="dot"></span> FROM FIRST IDEA TO FINAL BUILD</div>
                 <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
                 <div class="art-cross cross-one">+</div><div class="art-cross cross-two">+</div>
-                <div class="stack-layer layer-back"><span>01 / THINK</span><b>Clear thinking.</b><i>Strategy → Architecture</i></div>
+                <div class="stack-layer layer-back"><span>01 / THINK</span><b>Understand context.</b><i>Requirements → working software</i></div>
                 <div class="stack-layer layer-middle"><span>02 / BUILD</span><b>&lt;make it work /&gt;</b><i>PHP · WordPress · APIs</i></div>
                 <div class="stack-layer layer-front"><span>03 / DELIVER</span><b>Made to matter<span>↗</span></b><i>Products with purpose.</i></div>
                 <div class="art-footer"><span>CREATIVE MIND. ENGINEERING DISCIPLINE.</span><span>JC—01</span></div>
@@ -59,82 +183,89 @@
         </div>
     </header>
 
-    <div class="proof-strip"><div class="container proof-inner"><div><strong>9+</strong><span>Years of experience</span></div><div><strong>50+</strong><span>Projects delivered</span></div><div><strong>Full stack.</strong><span>From architecture to interface</span></div><a href="#projects">EXPLORE THE WORK <span>↓</span></a></div></div>
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title"><span class="section-index">01 / THE APPROACH</span>Engineering with<br>a human perspective.</h2>
-            <p class="section-sub">Practical engineering mindset focused on clean architecture, performance and business outcomes.</p>
-
-            <div class="about-portrait"><img src="images/profile_pic.png" alt="Jitendra Chouhan" width="240" height="240" loading="lazy" decoding="async"><div><span class="section-index">THE PERSON BEHIND THE CODE</span><h3>Jitendra Chouhan</h3><p>Senior Full Stack Developer · Team Lead</p></div></div><div class="about-box">
-                <div class="card">
-                <p>With over 9 years of professional experience, I specialize in building high-performance digital products that combine strong backend architecture, intuitive user experiences, and business-focused execution.</p>
-                </div>
-                <div class="card">
-                <p>My expertise spans PHP, WordPress, Laravel, CodeIgniter, REST APIs, database design, admin dashboards, eCommerce systems, SEO-ready websites, and scalable custom applications across industries including real estate, healthcare, research, and enterprise services.</p>
-                </div>
-                <div class="card">
-                <p>I also actively use modern AI tools such as ChatGPT and Claude Pro to accelerate development workflows, solve complex technical problems faster, generate smarter solutions, improve documentation, streamline content creation, and enhance productivity across projects.</p>
-                </div>
-                <div class="card">
-                <p>Beyond coding, I bring leadership experience in managing teams, reviewing code, coordinating with clients, prioritizing milestones, and delivering production-ready solutions with speed and quality.</p>
-                </div>
-                <div class="card">
-                <p>My focus is simple: build systems that perform well, scale reliably, and create measurable business value.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <div class="proof-strip"><div class="container proof-inner"><div><strong>9+</strong><span>Years in software development</span></div><div><strong>50+</strong><span>Projects delivered</span></div><div><strong>Team Lead</strong><span>Requirements through release</span></div><a href="#projects">EXPLORE SELECTED WORK <span>↓</span></a></div></div>
     <section id="projects">
         <div class="container">
-            <h2 class="section-title"><span class="section-index">02 / SELECTED WORK</span>Ideas out in<br>the real world<span class="accent">.</span></h2>
-            <p class="section-sub">A selection of real-world products and websites built for clients.</p>
+            <h2 class="section-title"><span class="section-index">01 / SELECTED WORK</span>Selected client work<span class="accent">.</span></h2>
+            <p class="section-sub">Web applications and client sites across real estate, healthcare, biotechnology, and business services.</p>
 
             <div class="grid">
 
-                <article class="card project project-1"><a class="project-thumbnail" href="https://somirealty.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Somi Realty Inc. (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">somirealty.com</span></div><img src="images/somirealty.com.png" alt="Somi Realty Inc. website screenshot" loading="lazy" decoding="async" data-fallback="Somi Realty Inc. — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Somi Realty Inc.</h3>
-                    <p>Modern real estate platform focused on listings, lead generation and growth.</p>
-                    <a href="https://somirealty.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+                <article class="card project project-1 featured-project"><a class="project-thumbnail" href="https://somirealty.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Somi Realty Inc. (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">somirealty.com</span></div><img src="images/somirealty.com.png" alt="Somi Realty Inc. website screenshot" loading="lazy" decoding="async" data-fallback="Somi Realty Inc. — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a>
+                    <div class="feature-copy">
+                        <p class="feature-category">Featured project · Real estate</p>
+                        <h3>Somi Realty Inc.</h3>
+                        <p>A property search platform that brings MLS listings to the web and gives buyers a direct way to inquire about homes.</p>
+                        <p>MLS / IDX integration · Property listings · Lead capture</p>
+                        <a class="feature-link" href="https://somirealty.com" target="_blank" rel="noopener noreferrer">Visit Somi Realty ↗</a>
+                    </div>
+                </article>
 
-                <article class="card project project-2"><a class="project-thumbnail" href="https://qralventures.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Ventures (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qralventures.com</span></div><img src="images/qralventures.com.png" alt="Qral Ventures website screenshot" loading="lazy" decoding="async" data-fallback="Qral Ventures — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Ventures</h3>
+                <article class="card project project-10"><a class="project-thumbnail" href="https://qralventures.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Ventures (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qralventures.com</span></div><img src="images/qralventures.com.png" alt="Qral Ventures website screenshot" loading="lazy" decoding="async" data-fallback="Qral Ventures — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Ventures</h3>
                     <p>Healthcare innovation and investment platform with premium branding.</p>
                     <a href="https://qralventures.com/" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
 
-                <article class="card project project-3"><a class="project-thumbnail" href="https://bluedotbio.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Bluedot Bio (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">bluedotbio.com</span></div><img src="images/bluedotbio.com.png" alt="Bluedot Bio website screenshot" loading="lazy" decoding="async" data-fallback="Bluedot Bio — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Bluedot Bio</h3>
-                    <p>Biotechnology company producing first-in-class drugs and platforms.</p>
+                <article class="card project project-2"><a class="project-thumbnail" href="https://bluedotbio.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Bluedot Bio (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">bluedotbio.com</span></div><img src="images/bluedotbio.com.png" alt="Bluedot Bio website screenshot" loading="lazy" decoding="async" data-fallback="Bluedot Bio — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Bluedot Bio</h3>
+                    <p>Biotechnology company developing drugs and platform technologies for prevalent diseases.</p>
                     <a href="https://bluedotbio.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
 
-                <article class="card project project-4"><a class="project-thumbnail" href="https://qral.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qral.com</span></div><img src="images/qral.com.png" alt="Qral Group website screenshot" loading="lazy" decoding="async" data-fallback="Qral Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Group</h3>
-                    <p>Corporate group website showcasing innovation and growth ecosystem.</p>
-                    <a href="https://qral.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
+                <article class="card project project-4"><a class="project-thumbnail project-thumbnail-brand" href="https://oralbluecare.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Oral Blue Care (opens in new tab)"><span class="brand-preview" aria-hidden="true"><span class="brand-preview-kicker">ORAL CARE · ORAL BLUE</span><strong>Thoughtful<br>oral care.</strong><span class="brand-preview-footer">ORALBLUECARE.COM <span>↗</span></span></span></a><h3>Oral Blue Care</h3>
+                    <p>Consumer oral-care brand offering fluoride-free toothpaste and mouthwash.</p>
+                    <a href="https://oralbluecare.com/" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
 
                 <article class="card project project-5"><a class="project-thumbnail" href="https://ikaikatherapeutics.com" target="_blank" rel="noopener noreferrer" aria-label="Visit ikaika Therapeutics (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">ikaikatherapeutics.com</span></div><img src="images/ikaikatherapeutics.com.png" alt="ikaika Therapeutics website screenshot" loading="lazy" decoding="async" data-fallback="ikaika Therapeutics — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>ikaika Therapeutics</h3>
-                    <p>First-in-class, Anti-Fibrotic Biologics, Advancing therapies designed from genetic signals</p>
+                    <p>Biotechnology company developing antifibrotic biologics, with therapies informed by genetic signals.</p>
                     <a href="https://ikaikatherapeutics.com" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
 
                 <article class="card project project-6"><a class="project-thumbnail" href="https://windowtx.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Window Therapeutics (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">windowtx.com</span></div><img src="images/windowtx.com.png" alt="Window Therapeutics website screenshot" loading="lazy" decoding="async" data-fallback="Window Therapeutics — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Window Therapeutics</h3>
-                    <p>Opening the window to better outcomes for patients</p>
+                    <p>Cancer therapeutics company developing targeted treatment approaches.</p>
                     <a href="https://windowtx.com/" target="_blank" rel="noopener noreferrer">Visit Project →</a></article>
-                <article class="card project project-7"><a class="project-thumbnail" href="https://qral.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qral.com</span></div><img src="images/qral.com.png" alt="Qral Group website screenshot" loading="lazy" decoding="async" data-fallback="Qral Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Group</h3>
+                <article class="card project project-11"><a class="project-thumbnail" href="https://qral.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Qral Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">qral.com</span></div><img src="images/qral.com.png" alt="Qral Group website screenshot" loading="lazy" decoding="async" data-fallback="Qral Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Qral Group</h3>
                     <p>At Qral Group, we bring together the brightest minds</p>
                     <a href="https://qral.com" target="_blank" rel="noopener noreferrer">View Project</a></article>
-                <article class="card project project-8"><a class="project-thumbnail" href="https://caeruslabs.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Careus Labs (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">caeruslabs.com</span></div><img src="images/caeruslabs.com.png" alt="Careus Labs website screenshot" loading="lazy" decoding="async" data-fallback="Careus Labs — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Careus Labs</h3>
-                    <p>Concierge organization to serve your unique research needs</p>
+
+                <article class="card project project-7"><a class="project-thumbnail" href="https://caeruslabs.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Careus Labs (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">caeruslabs.com</span></div><img src="images/caeruslabs.com.png" alt="Careus Labs website screenshot" loading="lazy" decoding="async" data-fallback="Careus Labs — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Careus Labs</h3>
+                    <p>Research services provider offering CRO capabilities and vivarium access.</p>
                     <a href="https://caeruslabs.com/" target="_blank" rel="noopener noreferrer">View Project</a></article>
-                <article class="card project project-9"><a class="project-thumbnail" href="https://www.detectivegroup.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Detective Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">www.detectivegroup.in</span></div><img src="images/detectivegroup.in.png" alt="Detective Group website screenshot" loading="lazy" decoding="async" data-fallback="Detective Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Detective Group</h3>
-                    <p>Confidential Investigation, all type of Detective Services</p>
+                <article class="card project project-8"><a class="project-thumbnail" href="https://www.detectivegroup.in/" target="_blank" rel="noopener noreferrer" aria-label="Visit Detective Group (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">www.detectivegroup.in</span></div><img src="images/detectivegroup.in.png" alt="Detective Group website screenshot" loading="lazy" decoding="async" data-fallback="Detective Group — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>Detective Group</h3>
+                    <p>Investigation and private detective services provider.</p>
                     <a href="https://www.detectivegroup.in/" target="_blank" rel="noopener noreferrer">View Project</a></article>
-                <article class="card project project-10"><a class="project-thumbnail" href="https://www.omrglobal.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit OMR Global (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">www.omrglobal.com</span></div><img src="images/omrglobal.com.png" alt="OMR Global website screenshot" loading="lazy" decoding="async" data-fallback="OMR Global — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>OMR Global</h3>
-                    <p>Access proprietary datasets and expert analyst insights to reduce uncertainty and strengthen your strategy.</p>
+                <article class="card project project-9"><a class="project-thumbnail" href="https://www.omrglobal.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit OMR Global (opens in new tab)"><div class="screenshot-frame"><span class="browser-dots" aria-hidden="true">● ● ●</span><span class="screenshot-url">www.omrglobal.com</span></div><img src="images/omrglobal.com.png" alt="OMR Global website screenshot" loading="lazy" decoding="async" data-fallback="OMR Global — preview unavailable"><span class="thumbnail-action" aria-hidden="true">VIEW PROJECT ↗</span></a><h3>OMR Global</h3>
+                    <p>Market research platform providing proprietary datasets and analyst insights.</p>
                     <a href="https://www.omrglobal.com/" target="_blank" rel="noopener noreferrer">View Project</a></article>
 
             </div>
         </div>
     </section>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">02 / THE APPROACH</span>Reliable engineering<br>for real applications.</h2>
+            <p class="section-sub">I work across requirements, implementation and support, with a practical focus on business needs and the realities of existing software.</p>
+
+            <div class="about-portrait"><img src="images/profile_pic.png" alt="Jitendra Chouhan" width="240" height="240" loading="lazy" decoding="async"><div><span class="section-index">THE PERSON BEHIND THE CODE</span><h3>Jitendra Chouhan</h3><p>Senior Software Engineer · PHP Developer · Team Lead</p></div></div><div class="about-box">
+                <div class="card">
+                <p>With 9+ years in software development, I build and maintain business applications, backend functionality, websites and integrations. My work includes developing new features in existing and legacy codebases and helping move requirements through implementation, debugging, release and testing.</p>
+                </div>
+                <div class="card">
+                <p>My day-to-day work centers on PHP and the WordPress ecosystem, with experience across CodeIgniter, Symfony and Laravel, REST APIs, database-driven applications, and frontend development. Project contexts have included real estate, healthcare, biotechnology, research and business websites.</p>
+                </div>
+                <div class="card">
+                <p>I use Claude Pro, ChatGPT, OpenAI Codex and Gemini as development assistants. I provide project context, review the generated changes, check requirements and investigate issues, then validate the application before delivery.</p>
+                </div>
+                <div class="card">
+                <p>As a Team Lead PHP Developer, I coordinate development work, clarify client requirements, review changes, communicate progress and help test and deploy updates. My leadership is hands-on and grounded in the delivery work.</p>
+                </div>
+                <div class="card">
+                <p>I aim to deliver useful, maintainable software by understanding the existing application and business logic before changing it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="experience">
         <div class="container">
-            <h2 class="section-title"><span class="section-index">03 / THE JOURNEY</span>Built on experience.</h2>
-            <p class="section-sub">Career journey across agencies, product teams and enterprise client projects.</p>
+            <h2 class="section-title"><span class="section-index">03 / EXPERIENCE</span>More than nine years<br>in software development.</h2>
+            <p class="section-sub">Experience across software teams and international client projects. Dates follow the existing portfolio record.</p>
 
             <div class="timeline">
 
@@ -143,14 +274,14 @@
                         <div class="company">
                             <a href="https://deaninfotech.com" target="_blank" rel="noopener noreferrer"><img class="company-logo" src="images/dean-logo.avif" alt="Dean Infotech" loading="lazy" decoding="async" data-fallback="Dean Infotech"></a>
                             <div>
-                                <h3>Team Lead - PHP Developer</h3>
+                                <h3>Team Lead PHP Developer</h3>
                                 <a href="https://deaninfotech.com" target="_blank" rel="noopener noreferrer"><p>Dean Infotech</p></a>
                             </div>
                         </div>
                         <div class="date-pill">2021 - Present</div>
                     </div>
                     <div class="exp-desc">
-                        Leading development teams while architecting WordPress, Laravel and custom PHP solutions. Managing developers, client communication, Git workflows, code quality, deployments and business-critical feature delivery.
+                        Leading PHP development work at Dean Infotech, coordinating implementation, client communication, code review, Git workflows, deployments and testing across business application requirements.
                     </div>
                 </div>
 
@@ -229,22 +360,23 @@
         <h2 class="section-title kinetic-title kinetic-skills"><span class="section-index">04 / THE TOOLKIT</span><span class="kinetic-lines"><span class="kinetic-line">Skills across the</span><span class="kinetic-line">software lifecycle.</span></span></h2>
         <p class="section-sub">From the first requirement to a healthy production system. Each phase has its own tools and skills, with clear handoffs between them.</p>
 
-        <ol class="sdlc-timeline" aria-label="Software lifecycle from discovery and planning through operations">
-            <li class="sdlc-step" data-stage="discover" data-step="01">
+        <ul class="phase-jump" aria-label="Jump to a lifecycle phase"><li><a href="#phase-discover">Plan</a></li><li><a href="#phase-design">Design</a></li><li><a href="#phase-build">Build</a></li><li><a href="#phase-integrate">Integrate</a></li><li><a href="#phase-verify">Verify</a></li><li><a href="#phase-deploy">Deploy</a></li><li><a href="#phase-operate">Operate</a></li></ul>
+            <ol class="sdlc-timeline" aria-label="Software lifecycle from discovery and planning through operations">
+            <li class="sdlc-step" id="phase-discover" tabindex="-1" data-stage="discover" data-step="01">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 01</span><h3>Discover &amp; plan</h3><p>Clarify the problem and set product priorities.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Prioritized product brief</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="Product brief with requirements, notes and a prioritized decision"><path class="sdlc-subtle" d="M32 24h144M32 120h144"/><path class="sdlc-paper" d="M58 17h83l23 23v76H58z"/><path class="sdlc-outline" d="M141 17v24h23"/><path class="sdlc-detail" d="M73 52h58M73 63h48M73 75h53M73 87h35"/><circle class="sdlc-soft" cx="143" cy="84" r="20"/><circle class="sdlc-outline" cx="143" cy="84" r="14"/><path class="sdlc-detail" d="m153 94 12 12m-27-23h10m-5-5v10"/><path class="sdlc-surface" d="M25 54h25v27H25z"/><path class="sdlc-detail" d="M31 62h13m-13 6h9"/></svg>
                     <div class="sdlc-skills"><section class="sdlc-skill-group"><h4>Product direction</h4><ul><li>Product Ownership</li><li>Feature Planning</li><li>Client Requirements</li></ul></section></div>
                 </article><svg class="sdlc-arrow" viewBox="0 0 42 32" aria-hidden="true"><path d="M21 2v24m-8-8 8 8 8-8"/></svg>
             </li>
-            <li class="sdlc-step" data-stage="design" data-step="02">
+            <li class="sdlc-step" id="phase-design" tabindex="-1" data-stage="design" data-step="02">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 02</span><h3>Design</h3><p>Shape the experience across screen sizes.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Approved screen blueprint</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="Desktop and mobile wireframes showing the same responsive page"><rect class="sdlc-surface" x="20" y="22" width="139" height="91" rx="4"/><path class="sdlc-outline" d="M20 36h139M67 120h44m-22-7v7"/><path class="sdlc-detail" d="M31 48h45m-45 8h64m-64 8h54"/><rect class="sdlc-paper" x="108" y="45" width="39" height="56" rx="2"/><path class="sdlc-detail" d="M115 54h25m-25 7h25m-25 7h17m-17 15h25m-25 7h20"/><path class="sdlc-subtle" d="M161 63h22m-7-7 7 7-7 7"/><rect class="sdlc-surface" x="183" y="40" width="23" height="60" rx="4"/><path class="sdlc-detail" d="M188 50h13m-13 7h13m-13 7h9m-9 25h13"/><circle class="sdlc-signal" cx="194" cy="93" r="2"/></svg>
                     <div class="sdlc-skills"><section class="sdlc-skill-group"><h4>Responsive experience</h4><ul><li>Responsive Design</li></ul></section></div>
                 </article><svg class="sdlc-arrow" viewBox="0 0 42 32" aria-hidden="true"><path d="M21 2v24m-8-8 8 8 8-8"/></svg>
             </li>
-            <li class="sdlc-step" data-stage="build" data-step="03">
+            <li class="sdlc-step" id="phase-build" tabindex="-1" data-stage="build" data-step="03">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 03</span><h3>Build</h3><p>Implement the application, data and interface.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Working application build</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="A code editor building an application that reads and writes to a database"><rect class="sdlc-surface" x="17" y="20" width="130" height="99" rx="4"/><path class="sdlc-outline" d="M17 37h130"/><circle class="sdlc-signal" cx="29" cy="29" r="2.5"/><circle class="sdlc-soft" cx="38" cy="29" r="2.5"/><circle class="sdlc-soft" cx="47" cy="29" r="2.5"/><path class="sdlc-detail" d="m39 53-9 7 9 7m27-14 9 7-9 7m15-14-6 16m12-12h30m-30 10h21m-53 17h62m-62 9h42"/><path class="sdlc-signal" d="M131 77h12v25h-12z"/><path class="sdlc-outline" d="M160 71c0-6 41-6 41 0v39c0 6-41 6-41 0z"/><ellipse class="sdlc-outline" cx="180.5" cy="71" rx="20.5" ry="6"/><path class="sdlc-subtle" d="M160 84c0 6 41 6 41 0m-41 13c0 6 41 6 41 0"/><path class="sdlc-detail" d="M147 91h10m-4-4 4 4-4 4"/></svg>
@@ -255,28 +387,28 @@
                     </div>
                 </article><svg class="sdlc-arrow" viewBox="0 0 42 32" aria-hidden="true"><path d="M21 2v24m-8-8 8 8 8-8"/></svg>
             </li>
-            <li class="sdlc-step" data-stage="integrate" data-step="04">
+            <li class="sdlc-step" id="phase-integrate" tabindex="-1" data-stage="integrate" data-step="04">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 04</span><h3>Integrate</h3><p>Connect the product to services and data.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Integrated system</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="An application hub connected to listings, maps, analytics, email and verification services"><rect class="sdlc-surface" x="81" y="48" width="58" height="48" rx="8"/><path class="sdlc-detail" d="M93 62h34m-34 9h23m-23 9h29"/><path class="sdlc-subtle" d="M81 72H49m90 0h32M110 48V25m0 71v20M81 56 58 39m81 34 23-34m-81 34-23 20m81-20 23 20"/><path class="sdlc-surface" d="M25 25h31v27H25zM164 20c0-10 8-17 18-17s18 7 18 17c0 13-18 31-18 31s-18-18-18-31zM24 91h34v29H24zM163 95h37v25h-37z"/><path class="sdlc-detail" d="M31 34h6m6 0h6m-18 7h6m6 0h6m-18 7h15m11 12h11m110-42h14m-7-7v14m-20 24h10m-8-4v8m-84 31v18m-5-6 5 6 5-6m64-2h34m-34 7 17 12 17-12"/><circle class="sdlc-signal" cx="110" cy="72" r="4"/></svg>
                     <div class="sdlc-skills"><section class="sdlc-skill-group"><h4>APIs &amp; integrations</h4><ul><li>REST APIs</li><li>MLS / IDX Integration</li><li>Google Maps API</li><li>Google Analytics</li><li>reCAPTCHA</li><li>Mailchimp</li></ul></section></div>
                 </article><svg class="sdlc-arrow" viewBox="0 0 42 32" aria-hidden="true"><path d="M21 2v24m-8-8 8 8 8-8"/></svg>
             </li>
-            <li class="sdlc-step" data-stage="verify" data-step="05">
+            <li class="sdlc-step" id="phase-verify" tabindex="-1" data-stage="verify" data-step="05">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 05</span><h3>Verify</h3><p>Test behavior and review code changes.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Verified release candidate</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="A QA checklist catches defects before the release is approved"><rect class="sdlc-paper" x="29" y="18" width="99" height="108" rx="3"/><path class="sdlc-outline" d="M50 18v-6h57v6"/><path class="sdlc-detail" d="m43 43 5 5 9-11m8 8h49m-68 19 5 5 9-11m8 8h49m-68 19 5 5 9-11m8 8h31"/><circle class="sdlc-soft" cx="156" cy="75" r="31"/><circle class="sdlc-outline" cx="156" cy="75" r="23"/><path class="sdlc-detail" d="m144 75 8 8 17-19"/><path class="sdlc-surface" d="m186 45 12-11 11 12-12 11z"/><path class="sdlc-detail" d="m193 46 5 5m0-5-5 5"/><path class="sdlc-subtle" d="M128 117h62m-8-6 8 6-8 6"/></svg>
                     <div class="sdlc-skills"><section class="sdlc-skill-group"><h4>Quality checks</h4><ul><li>QA &amp; Testing</li><li>AI Code Review</li></ul></section></div>
                 </article><svg class="sdlc-arrow" viewBox="0 0 42 32" aria-hidden="true"><path d="M21 2v24m-8-8 8 8 8-8"/></svg>
             </li>
-            <li class="sdlc-step" data-stage="deploy" data-step="06">
+            <li class="sdlc-step" id="phase-deploy" tabindex="-1" data-stage="deploy" data-step="06">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 06</span><h3>Deploy</h3><p>Release a verified build to production.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Live release</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="A verified build passes through a release gate to production servers"><path class="sdlc-subtle" d="M26 70h58m54 0h54"/><rect class="sdlc-surface" x="15" y="48" width="50" height="43" rx="4"/><path class="sdlc-detail" d="M24 58h30m-30 9h20m-20 9h25"/><circle class="sdlc-signal" cx="53" cy="83" r="3"/><path class="sdlc-surface" d="M86 52h44v37H86z"/><path class="sdlc-detail" d="m96 70 8 8 17-19"/><rect class="sdlc-surface" x="151" y="29" width="52" height="88" rx="4"/><path class="sdlc-outline" d="M151 57h52m-52 28h52"/><circle class="sdlc-signal" cx="161" cy="43" r="3"/><circle class="sdlc-signal" cx="161" cy="72" r="3"/><circle class="sdlc-signal" cx="161" cy="101" r="3"/><path class="sdlc-detail" d="M170 43h23m-23 29h23m-23 29h23M68 70h13m49 0h12"/></svg>
                     <div class="sdlc-skills"><section class="sdlc-skill-group"><h4>Hosting &amp; release</h4><ul><li>Linux</li><li>cPanel</li><li>FTP / File Deployment</li><li>Apache / .htaccess</li></ul></section></div>
                 </article><svg class="sdlc-arrow" viewBox="0 0 42 32" aria-hidden="true"><path d="M21 2v24m-8-8 8 8 8-8"/></svg>
             </li>
-            <li class="sdlc-step" data-stage="operate" data-step="07">
+            <li class="sdlc-step" id="phase-operate" tabindex="-1" data-stage="operate" data-step="07">
                 <article class="sdlc-card">
                     <header class="sdlc-copy"><span class="sdlc-phase-label">PHASE 07</span><h3>Operate &amp; maintain</h3><p>Support production and improve existing systems.</p><div class="sdlc-handoff"><span>HANDOFF</span><strong>Health insights for the next plan</strong><i aria-hidden="true">↗</i></div></header>
                     <svg class="sdlc-scene" viewBox="0 0 220 142" role="img" aria-label="Production monitoring tracks system health and support issues"><rect class="sdlc-surface" x="20" y="20" width="126" height="91" rx="4"/><path class="sdlc-outline" d="M20 38h126"/><circle class="sdlc-signal" cx="31" cy="29" r="2.5"/><circle class="sdlc-soft" cx="40" cy="29" r="2.5"/><path class="sdlc-subtle" d="M33 91h100M33 72h100M33 53h100"/><path class="sdlc-detail" d="M34 82h17l8-19 11 26 12-20 10 13h13l9-18 8 13h11"/><path class="sdlc-surface" d="M170 49a28 28 0 1 1-8 37"/><path class="sdlc-detail" d="M157 86v-13h13m-4-18-8 10 7 3-5 14"/><path class="sdlc-outline" d="M162 42v-9h18m-5-6 6 6-6 6"/></svg>
@@ -294,12 +426,26 @@
     </div>
 </section>
 
-
+    <section id="ai-development" class="workflow-section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-index">05 / AI-ASSISTED DEVELOPMENT</span>AI tools, with<br>engineering oversight.</h2>
+            <p class="section-sub">I use Claude Pro, ChatGPT, OpenAI Codex and Gemini to accelerate implementation, debugging and code review while maintaining engineering oversight.</p>
+            <div class="workflow-grid">
+                <ol class="workflow-steps">
+                    <li><strong>Understand</strong><span>Clarify requirements and inspect the application, dependencies and business logic.</span></li>
+                    <li><strong>Contextualize</strong><span>Give AI tools relevant project context and specific implementation instructions, including questions about unfamiliar technical approaches.</span></li>
+                    <li><strong>Implement and inspect</strong><span>Use AI to assist with changes, then review the code and file differences for gaps or incorrect behavior.</span></li>
+                    <li><strong>Debug and validate</strong><span>Investigate issues, test the actual application and deploy changes through the established workflow.</span></li>
+                </ol>
+                <aside class="workflow-note"><h3>Developer-led delivery</h3><p>I understand existing codebases, question output that does not fit the requirements and validate the result before it reaches the application. AI is part of my software development workflow, not a substitute for engineering judgment.</p></aside>
+            </div>
+        </div>
+    </section>
 
     <section id="contact">
         <div class="container">
-            <h2 class="section-title kinetic-title kinetic-contact"><span class="section-index">05 / YOUR NEXT CHAPTER</span><span class="kinetic-lines"><span class="kinetic-line">Have something</span><span class="kinetic-line">in mind<span class="accent">?</span></span></span></h2>
-            <p class="section-sub">Let’s build your next website, platform, AI-powered workflow, or business automation system.</p>
+            <h2 class="section-title kinetic-title kinetic-contact"><span class="section-index">06 / CONTACT</span><span class="kinetic-lines"><span class="kinetic-line">Have something</span><span class="kinetic-line">in mind<span class="accent">?</span></span></span></h2>
+            <p class="section-sub">For senior engineering roles, PHP development opportunities, technical lead work or client projects, get in touch.</p>
 
             <div class="contact-grid">
 

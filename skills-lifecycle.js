@@ -1,10 +1,10 @@
 (() => {
   const section = document.querySelector('#skills');
   const list = section?.querySelector('.sdlc-timeline');
-  if (!section || !list || !window.gsap || !window.ScrollTrigger) return;
-  gsap.registerPlugin(ScrollTrigger);
-  const phases = gsap.utils.toArray('.sdlc-step', list);
-  const arrows = gsap.utils.toArray('.sdlc-arrow', list);
+  if (!list) return;
+  const phases = [...list.querySelectorAll('.sdlc-step')];
+  const cards = phases.map(phase => phase.querySelector('.sdlc-card'));
+  const arrows = list.querySelectorAll('.sdlc-arrow');
   const feedback = section.querySelector('.sdlc-feedback');
   const activate = index => {
     phases.forEach((phase, i) => {
@@ -17,9 +17,39 @@
     });
     feedback?.classList.toggle('is-current', index === phases.length - 1);
   };
-  activate(0);
+  let currentIndex = -1;
+  let frame = null;
+  const syncCurrentPhase = () => {
+    frame = null;
+    const midpoint = window.innerHeight / 2;
+    let nearestIndex = 0;
+    let nearestDistance = Infinity;
+    cards.forEach((card, index) => {
+      const { top, bottom } = card.getBoundingClientRect();
+      const distance = Math.max(top - midpoint, midpoint - bottom, 0);
+      if (distance < nearestDistance) {
+        nearestIndex = index;
+        nearestDistance = distance;
+      }
+    });
+    if (nearestIndex === currentIndex) return;
+    currentIndex = nearestIndex;
+    activate(nearestIndex);
+  };
+  const scheduleSync = () => {
+    if (frame === null) frame = requestAnimationFrame(syncCurrentPhase);
+  };
+  window.addEventListener('scroll', scheduleSync, { passive: true });
+  window.addEventListener('resize', scheduleSync);
+  window.addEventListener('pageshow', scheduleSync);
+  syncCurrentPhase();
+
+  if (!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
   const motion = gsap.matchMedia();
   motion.add('(prefers-reduced-motion: no-preference)', () => {
+    // Start each effect as its heading reaches the middle of the viewport.
+    const phaseStart = 'top center';
     const progress = document.createElement('span');
     progress.className = 'sdlc-progress';
     progress.setAttribute('aria-hidden', 'true');
@@ -27,17 +57,14 @@
     gsap.to(progress, {
       scaleY: 1,
       ease: 'none',
-      scrollTrigger: { trigger: list, start: 'top 68%', end: 'bottom 72%', scrub: 0.55 }
+      scrollTrigger: {
+        trigger: list,
+        start: phaseStart,
+        end: 'bottom center',
+        scrub: true
+      }
     });
-    phases.forEach((phase, index) => {
-      ScrollTrigger.create({
-        trigger: phase,
-        start: 'top 58%',
-        end: 'bottom 58%',
-        onEnter: () => activate(index),
-        onEnterBack: () => activate(index),
-        onLeaveBack: () => activate(Math.max(0, index - 1))
-      });
+    phases.forEach(phase => {
       const paths = phase.querySelectorAll('.sdlc-scene path.sdlc-detail, .sdlc-scene path.sdlc-outline');
       paths.forEach(path => {
         const length = path.getTotalLength();
@@ -48,12 +75,12 @@
         duration: 0.65,
         stagger: 0.018,
         ease: 'power2.out',
-        scrollTrigger: { trigger: phase, start: 'top 74%', toggleActions: 'play none none reverse' }
+        scrollTrigger: { trigger: phase, start: phaseStart, toggleActions: 'play none none reverse' }
       });
       gsap.fromTo(phase.querySelector('.sdlc-scene'),
         { scale: 0.96, filter: 'brightness(.8)' },
         { scale: 1, filter: 'brightness(1)', duration: 0.7, ease: 'power2.out',
-          scrollTrigger: { trigger: phase, start: 'top 74%', toggleActions: 'play none none reverse' } }
+          scrollTrigger: { trigger: phase, start: phaseStart, toggleActions: 'play none none reverse' } }
       );
     });
     const loopPaths = feedback?.querySelectorAll('svg path');
@@ -64,7 +91,7 @@
       });
       gsap.to(loopPaths, {
         strokeDashoffset: 0, stagger: 0.1, duration: 0.8, ease: 'power2.out',
-        scrollTrigger: { trigger: feedback, start: 'top 78%', toggleActions: 'play none none reverse' }
+        scrollTrigger: { trigger: feedback, start: phaseStart, toggleActions: 'play none none reverse' }
       });
     }
     return () => progress.remove();
